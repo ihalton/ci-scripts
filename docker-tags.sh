@@ -32,7 +32,7 @@ if [[ "$BRANCH" == "master" || "$BRANCH" == "trunk" || "$BRANCH" == "release-lat
     git show-ref --tags -d |
       grep "^${SHA1}" |
       sed -e 's,.* refs/tags/,,' -e 's/\^{}//' |
-      grep "^v[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+$" |
+      grep "^modern-v[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+$" |
       sort
   )
 
