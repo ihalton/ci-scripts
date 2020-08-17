@@ -29,6 +29,8 @@ mkdir -p docker-cache
   sed 's/\//-/g' >"${tags_file}"
 xargs -t -I % docker tag "${push_to}:${git_hash}" "${push_to}:%" <"${tags_file}"
 
+cat ${tags_file}
+
 ##### push #####
 override="./.circleci/bin/docker-push-override.sh"
 if [[ -x "${override}" ]]; then
