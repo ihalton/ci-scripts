@@ -34,7 +34,7 @@
     "scripts"
   ],
   "license": "Apache-2.0",
-  "name": "@reactioncommerce/ci-scripts",
+  "name": "@ihalton/ci-scripts",
   "publishConfig": {
     "access": "public"
   },
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/reactioncommerce/ci-scripts.git"
+    "url": "git+ssh://git@github.com/ihalton/ci-scripts.git"
   },
   "version": "1.6.2"
 }
