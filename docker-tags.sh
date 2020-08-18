@@ -32,12 +32,12 @@ if [[ "$BRANCH" == "master" || "$BRANCH" == "trunk" || "$BRANCH" == "release-lat
     git show-ref --tags -d |
       grep "^${SHA1}" |
       sed -e 's,.* refs/tags/,,' -e 's/\^{}//' |
-      grep "^modern-v[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+$" |
+      grep "^v-[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+$" |
       sort
   )
 
   # Find the highest tagged version number
-  HIGHEST_TAG=$(git --no-pager tag | grep "^v[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+$" | sort -r | head -n 1)
+  HIGHEST_TAG=$(git --no-pager tag | grep "^v-[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+$" | sort -r | head -n 1)
 
   # We tag :latest only if
   # 1. We have a current tag
